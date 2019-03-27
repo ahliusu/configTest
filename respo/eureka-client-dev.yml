@@ -1,0 +1,12 @@
+server:
+    port: 8781
+
+spring:
+    application:
+        name: eureka-client
+        
+cloud:
+    config:
+        label: master
+        profile: dev
+        name: eureka-client
