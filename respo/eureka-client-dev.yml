@@ -10,3 +10,7 @@ cloud:
         label: master
         profile: dev
         name: eureka-client
+        
+git:
+    test:
+        value: test123
