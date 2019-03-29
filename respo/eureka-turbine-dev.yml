@@ -26,4 +26,4 @@ turbine:
     clusterNameExpression: new String("default")
     combine-host: true
     instanceUrlSuffix:
-        default: actuator/hystrix.stream    
+        default: actuator/hystrix.stream
