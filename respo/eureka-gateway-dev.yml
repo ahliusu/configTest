@@ -5,9 +5,17 @@ eureka:
     client:
         serviceUrl:
             defaultZone: http://eureka-server:8761/eureka/
-            
+
+feign:
+  hystrix:
+    enabled: true
+    
 spring:
     application:
         name: eureka-gateway
-
+    cloud:
+        gateway:
+            discovery:
+                locator:
+                    enabled: true #是否与服务发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为false
 
