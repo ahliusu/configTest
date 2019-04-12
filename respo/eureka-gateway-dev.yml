@@ -1,6 +1,9 @@
+spring:
+    instance:
+        prefer-ip-address: true
 feign:
-  hystrix:
-    enabled: true
+    hystrix:
+        enabled: true
     
 spring:
     cloud:
