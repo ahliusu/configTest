@@ -1,11 +1,10 @@
-spring:
-    instance:
-        prefer-ip-address: true
 feign:
     hystrix:
         enabled: true
     
 spring:
+    instance:
+        prefer-ip-address: true
     cloud:
         gateway:
             discovery:
