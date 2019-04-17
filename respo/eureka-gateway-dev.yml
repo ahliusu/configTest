@@ -2,8 +2,13 @@ server:
     port: 8900
 
 spring:
-   application:
-      name: eureka-gateway
+    application:
+        name: eureka-gateway
+    cloud:
+        gateway:
+            discovery:
+                locator:
+                    enabled: true #是否与服务发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为false
 
 eureka:
     instance:
@@ -13,10 +18,5 @@ feign:
     hystrix:
         enabled: true
     
-spring:
-    cloud:
-        gateway:
-            discovery:
-                locator:
-                    enabled: true #是否与服务发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为false
+
 
