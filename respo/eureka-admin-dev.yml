@@ -7,7 +7,7 @@ spring:
     security:
         user:
             name: root
-            paswword: "{cipher}AQC1I24AYa13bPLslUc8kHwpTJ5aEc7eYaMcKPSH5X+MS9AaozoOW2KSx5fPXWuC4bma5twZpV1IUvhDgjJ4DkdDNTmPTjDkf9cq87Ds1FBKSb299thZN/5VvhwrxSVjDSiZal4cIKVFxzQTPoPUOTd+cupl8kh3Ik2pjjzrbJaj87JzAkMLNqiElEsCSB5S/iY/oTgX5RCr8dWFXeKx3pCoaPX4WTKZHzjaDZYKelMONB9s7podHt7Oy0H0v6KwR0+8iNFTwtj5+MNXZK81bNFPSny+T7jCumX35LoXUVWyP9S2nEXrOgyiQ++Uhq3hcdP9aVmPPDWTHjotgMQDN5zGMHymU6EvZvgmU/yQEXNRvDA51GDQfRIk+bjq2PAooco="
+            password: "{cipher}AQC1I24AYa13bPLslUc8kHwpTJ5aEc7eYaMcKPSH5X+MS9AaozoOW2KSx5fPXWuC4bma5twZpV1IUvhDgjJ4DkdDNTmPTjDkf9cq87Ds1FBKSb299thZN/5VvhwrxSVjDSiZal4cIKVFxzQTPoPUOTd+cupl8kh3Ik2pjjzrbJaj87JzAkMLNqiElEsCSB5S/iY/oTgX5RCr8dWFXeKx3pCoaPX4WTKZHzjaDZYKelMONB9s7podHt7Oy0H0v6KwR0+8iNFTwtj5+MNXZK81bNFPSny+T7jCumX35LoXUVWyP9S2nEXrOgyiQ++Uhq3hcdP9aVmPPDWTHjotgMQDN5zGMHymU6EvZvgmU/yQEXNRvDA51GDQfRIk+bjq2PAooco="
 
 eureka:
     instance:
