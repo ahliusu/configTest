@@ -1,7 +1,10 @@
+server:
+    port: 8801
+    
+    
 spring:
-    instance:
-        #preferIpAddress: true
-        prefer-ip-address: true
+    application:
+        name: eureka-client
     zipkin:
         base-url: http://localhost:9411
         
