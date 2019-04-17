@@ -14,9 +14,6 @@ eureka:
         metadata-map:
             user.name: ${spring.security.user.name}
             user.password: ${spring.security.user.password}
-      
-eureka:
-    instance:
         prefer-ip-address: true
         
 management:
