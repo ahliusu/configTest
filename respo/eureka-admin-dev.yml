@@ -16,7 +16,7 @@ spring:
         admin:
             notify:
                 mail:
-                    to: lyf_19901204@126.com
+                    to: lyf_19901204@163.com
 
 eureka:
     instance:
