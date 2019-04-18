@@ -16,7 +16,7 @@ spring:
         admin:
             notify:
                 mail:
-                    to: liu.yanfei@hgnyjs.com
+                    to: lyf_19901204@126.com
 
 eureka:
     instance:
