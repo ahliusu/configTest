@@ -11,7 +11,7 @@ spring:
     mail:
         host: smtp.163.com
         username: lyf_19901204
-        password: WNWANlyf
+        password: lyf19901204
     boot:
         admin:
             notify:
