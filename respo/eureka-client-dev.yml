@@ -14,7 +14,16 @@ eureka:
 feign:
     hystrix:
         enabled: true
-      
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        health:
+            show-details: ALWAYS
+         
 git:
     test:
         value: "{cipher}AQCHm5W243yV6V0QmpW7scMJeRVE1bMocsth6PsRSPXxUTv7HKryinIP3uc6icwBigDaN+uB4piwHxZ/y2l3T6vaeTfmLQW4goWGK+fgQuecr2gQROwAjlEUdOWxCxjVladRkNkEvnH2L3InmzH9X/IgkEhqPV6LB9cBkMOw7jXEnT6w8I8768EvOIKYsdoT9dNYpzmhnE2W1kYKtTxNjObN3WM9/JktPdeoaWuOfwPVqhLX3FggDRu7L/m1nUP3VVre0GZQiUiZTNB8uy7rzzLX7VgOF007HeyORzJHVGgK8EAPyLenGY/vJ+qTr7lq8nTicCKvor50k34Jxfk5h5MitKIOJayh/Wg8sdmgShoZ8EhbvTWpGo6UdfqXZKAR5rg="
