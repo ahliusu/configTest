@@ -6,9 +6,11 @@ spring:
         name: eureka-gateway
     cloud:
         gateway:
+            routes:
             discovery:
                 locator:
                     enabled: true #是否与服务发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为false
+                    lowerCaseServiceId: true
 
 eureka:
     instance:
