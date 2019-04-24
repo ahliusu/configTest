@@ -1,14 +1,3 @@
-server:
-    port: 8900
-
-eureka:
-    instance:
-        prefer-ip-address: true
-            
-spring:
-    application:
-        name: eureka-turbine
-
 management:
     endpoints:
         web:
