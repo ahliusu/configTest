@@ -13,12 +13,12 @@ management:
 
 spring:
     datasource:
+        url: jdbc:mysql://127.0.0.1:3306/springcloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+        username: root
+        password: manager
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
         druid:
-            url: jdbc:mysql://127.0.0.1:3306/springcloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-            username: root
-            password: manager
             initial-size: 10
             max-active: 100
             min-idle: 10
