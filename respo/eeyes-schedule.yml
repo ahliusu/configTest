@@ -1,0 +1,60 @@
+spring:
+    zipkin:
+        base-url: http://localhost:9411
+
+feign:
+    hystrix:
+        enabled: true
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        health:
+            show-details: ALWAYS
+
+mybatis-plus:
+    configuration:
+        mapperLocations: classpath:mapper/**/*.xml
+        typeAliasesPackage: com.hgny.modules.**.entity
+        mapUnderscoreToCamelCase: true
+        db-config:
+            idType: 0
+            fieldStrategy: 1
+
+spring:
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/app_eemseeyes?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: manager
+        druid:
+            initial-size: 10
+            max-active: 100
+            min-idle: 10
+            max-wait: 60000
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            time-between-eviction-runs-millis: 60000
+            min-evictable-idle-time-millis: 300000
+            #validation-query: SELECT 1 FROM DUAL
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            stat-view-servlet:
+                enabled: true
+                url-pattern: /druid/*
+                #login-username: admin
+                #login-password: admin
+            filter:
+                stat:
+                    log-slow-sql: true
+                    slow-sql-millis: 1000
+                    merge-sql: false
+                wall:
+                    config:
+                        multi-statement-allow: true
+            
