@@ -6,9 +6,19 @@ feign:
             ConnectTimeout: 3000
             ReadTimeout: 60000    
 
-#ribbon:
-#    ReadTimeout: 60000
-#    ConnectTimeout: 5000
+hystrix:
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: true
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 60000
+
+ribbon:
+    ReadTimeout: 60000
+    ConnectTimeout: 5000
         
 management:
     endpoints:
