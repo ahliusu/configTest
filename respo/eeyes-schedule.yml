@@ -2,6 +2,10 @@ feign:
     hystrix:
         enabled: true
 
+ribbon:
+    ReadTimeout: 60000
+    ConnectTimeout: 5000
+        
 management:
     endpoints:
         web:
