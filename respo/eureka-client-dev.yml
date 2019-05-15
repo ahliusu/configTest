@@ -6,6 +6,10 @@ feign:
     hystrix:
         enabled: true
 
+eureka:
+    instance:
+        leaseRenewalIntervalInSeconds: 5
+        leaseExpirationDurationInSeconds: 5
 management:
     endpoints:
         web:

@@ -1,6 +1,6 @@
-feign:
-    hystrix:
-        enabled: false  
+#feign:
+#    hystrix:
+#        enabled: false  
 
 #hystrix:
 #    command:
