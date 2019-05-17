@@ -30,9 +30,10 @@ mybatis-plus:
     mapperLocations: classpath:mapper/**/*.xml
     typeAliasesPackage: com.hgny.modules.**.entity
     mapUnderscoreToCamelCase: true
-    db-config:
-        idType: 0
-        fieldStrategy: 1
+    global-config:
+        db-config:
+            idType: 0
+            fieldStrategy: NOT_NULL
 
 spring:
     zipkin:
