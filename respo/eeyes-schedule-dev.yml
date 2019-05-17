@@ -26,13 +26,13 @@ management:
             show-details: ALWAYS
 
 mybatis-plus:
-    configuration:
-        mapperLocations: classpath:mapper/**/*.xml
-        typeAliasesPackage: com.hgny.modules.**.entity
-        mapUnderscoreToCamelCase: true
-        db-config:
-            idType: 0
-            fieldStrategy: 1
+    #configuration:
+    mapperLocations: classpath:mapper/**/*.xml
+    typeAliasesPackage: com.hgny.modules.**.entity
+    mapUnderscoreToCamelCase: true
+    db-config:
+        idType: 0
+        fieldStrategy: 1
 
 spring:
     zipkin:
