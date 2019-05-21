@@ -1,23 +1,42 @@
-#spring:
-#    cloud:
-#        gateway:
-#            routes:
-#            - id: eureka-client
-#              uri: lb://eureka-client
-#              predicates:
-#              - Path=/eureka-client/**
-#                filters:
-#                - name: Retry
-#                  args:
-#                    retries: 3
-            #discovery:
-                #locator:
-                    #enabled: true #是否与服务发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为false
-                    #lowerCaseServiceId: true
+spring:
+    cloud:
+        gateway:
+            discovery:
+                locator:
+                    enabled: false
+                    lowerCaseServiceId: true
+        routes:
+        - id: eeyes-api
+          uri: lb://EEYES-API
+          predicates:
+          - Path=/eeyes-api/**
+          filters:
+          - StripPrefix=1
+          - name: Retry
+            args:
+                retries: 3
+                series:
+                - SERVER_ERROR
+                - CLIENT_ERROR
+                statuses:
+                - NOT_FOUND
+                - INTERNAL_SERVER_ERROR
+        - id: eureka-client
+          uri: lb://EUREKA-CLIENT
+          predicates:
+          - Path=/eureka-client/**
+          filters:
+          - StripPrefix=1
+          - name: Retry
+            args:
+                retries: 3
+                series:
+                - SERVER_ERROR
+                - CLIENT_ERROR
+                statuses:
+                - NOT_FOUND
+                - INTERNAL_SERVER_ERROR
 
 feign:
     hystrix:
         enabled: true
-    
-
-
