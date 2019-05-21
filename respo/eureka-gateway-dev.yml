@@ -2,6 +2,10 @@ spring:
     cloud:
         gateway:
             routes:
+            - id: eureka-client
+              uri: lb://eureka-client
+              predicates:
+              - Path=/eureka-client/**
                 filters:
                 - name: Retry
                   args:
