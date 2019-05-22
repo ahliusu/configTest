@@ -11,14 +11,16 @@ eureka:
         leaseRenewalIntervalInSeconds: 5
         leaseExpirationDurationInSeconds: 5
 
-management:
-    endpoints:
-        web:
-            exposure:
-                include: "*"
-    endpoint:
-        health:
-            show-details: ALWAYS
+#management:
+#    endpoints:
+#        web:
+#            exposure:
+#                include: "*"
+#    endpoint:
+#        shutdown:
+#            enabled: true
+#        health:
+#            show-details: ALWAYS
             
 git:
     test:
