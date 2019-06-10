@@ -1,5 +1,7 @@
 spring:
     cloud:
+        inetutils:
+            preferredNetworks: 10.10.0
         gateway:
             discovery:
                 locator:
@@ -40,3 +42,7 @@ spring:
 feign:
     hystrix:
         enabled: true
+        
+eureka:
+    instance:
+        preferIpAddress: true
