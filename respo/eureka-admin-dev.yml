@@ -1,7 +1,7 @@
 spring:
     cloud:
         inetutils:
-            preferredNetworks: 10.10.0
+            preferredNetworks: "10.10.0"
     security:
         user:
             name: root
