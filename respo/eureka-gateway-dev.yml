@@ -46,3 +46,4 @@ feign:
 eureka:
     instance:
         preferIpAddress: true
+        instanceId: ${spring.application.name}:${server.port}
