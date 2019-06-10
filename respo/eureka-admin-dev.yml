@@ -1,4 +1,7 @@
 spring:
+    cloud:
+        inetutils:
+            preferredNetworks: 10.10.0
     security:
         user:
             name: root
@@ -17,6 +20,7 @@ spring:
 
 eureka:
     instance:
+        preferIpAddress: true
         metadata-map:
             user.name: ${spring.security.user.name}
             user.password: ${spring.security.user.password}
