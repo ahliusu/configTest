@@ -1,7 +1,7 @@
 spring:
     cloud:
-        inetutils:
-            preferredNetworks: "10.10.0"
+#        inetutils:
+#            preferredNetworks: "10.10.0"
         gateway:
             discovery:
                 locator:
@@ -43,7 +43,7 @@ feign:
     hystrix:
         enabled: true
         
-eureka:
-    instance:
-        preferIpAddress: true
-        instanceId: ${spring.application.name}:${server.port}
+#eureka:
+#    instance:
+#        preferIpAddress: true
+#        instanceId: ${spring.application.name}:${server.port}
