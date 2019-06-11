@@ -1,20 +1,20 @@
 spring:
     zipkin:
         base-url: http://localhost:9411
-    #cloud:
-        #inetutils:
-            #preferredNetworks: "10.10.0"
+#    cloud:
+#        inetutils:
+#            preferredNetworks: "10.10.0"
 
 feign:
     hystrix:
         enabled: true
 
 #eureka:
-    #instance:
-        #preferIpAddress: true
-        #leaseRenewalIntervalInSeconds: 5
-        #leaseExpirationDurationInSeconds: 5
-        #instanceId: ${spring.application.name}:${server.port}-${random.int}
+#    instance:
+#        preferIpAddress: true
+#        leaseRenewalIntervalInSeconds: 5
+#        leaseExpirationDurationInSeconds: 5
+#        instanceId: ${spring.application.name}:${server.port}-${random.int}
 
 management:
     endpoints:
