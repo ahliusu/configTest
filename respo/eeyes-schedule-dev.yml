@@ -1,4 +1,6 @@
-#feign:
+feign:
+    httpclient:
+        enabled: true
 #    hystrix:
 #        enabled: false  
 
