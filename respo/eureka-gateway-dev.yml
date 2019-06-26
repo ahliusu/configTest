@@ -1,7 +1,7 @@
 spring:
     cloud:
-#        inetutils:
-#            preferredNetworks: "10.10.0"
+        inetutils:
+            preferredNetworks: "10.10.0"
         gateway:
             discovery:
                 locator:
@@ -38,12 +38,33 @@ spring:
                     statuses:
                     - NOT_FOUND
                     - INTERNAL_SERVER_ERROR
+            - id: eeyes-schedule
+              uri: lb://EUREKA-SCHEDULE
+              predicates:
+              - Path=/eeyes-schedule/**
+              filters:
+              - StripPrefix=1
+              - name: Retry
+                args:
+                    retries: 3
+                    series:
+                    - SERVER_ERROR
+                    - CLIENT_ERROR
+                    statuses:
+                    - NOT_FOUND
+                    - INTERNAL_SERVER_ERROR
 
 feign:
     hystrix:
         enabled: true
-        
-#eureka:
-#    instance:
-#        preferIpAddress: true
-#        instanceId: ${spring.application.name}:${server.port}
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        shutdown:
+            enabled: true
+        health:
+            show-details: ALWAYS
