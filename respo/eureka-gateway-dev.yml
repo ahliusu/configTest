@@ -39,7 +39,7 @@ spring:
                     - NOT_FOUND
                     - INTERNAL_SERVER_ERROR
             - id: eeyes-schedule
-              uri: lb://EUREKA-SCHEDULE
+              uri: lb://EEYES-SCHEDULE
               predicates:
               - Path=/eeyes-schedule/**
               filters:
