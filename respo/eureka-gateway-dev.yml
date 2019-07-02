@@ -53,6 +53,21 @@ spring:
                     statuses:
                     - NOT_FOUND
                     - INTERNAL_SERVER_ERROR
+            - id: python-sidecar
+              uri: lb://PYTHON-SIDECAR
+              predicates:
+              - Path=/python-sidecar/**
+              filters:
+              - StripPrefix=1
+              - name: Retry
+                args:
+                    retries: 3
+                    series:
+                    - SERVER_ERROR
+                    - CLIENT_ERROR
+                    statuses:
+                    - NOT_FOUND
+                    - INTERNAL_SERVER_ERROR
 
 feign:
     hystrix:
