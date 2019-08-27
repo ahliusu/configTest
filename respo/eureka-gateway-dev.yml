@@ -42,6 +42,23 @@ spring:
                     - REQUEST_TIMEOUT
                     - SERVICE_UNAVAILABLE
                     - GATEWAY_TIMEOUT
+            - id: eureka-dfs
+              uri: lb://EUREKA-DFS
+              predicates:
+              - Path=/eureka-dfs/**
+              filters:
+              - StripPrefix=1
+              - name: Retry
+                args:
+                    retries: 5
+                    series:
+                    - SERVER_ERROR
+                    - CLIENT_ERROR
+                    statuses:
+                    - NOT_FOUND
+                    - REQUEST_TIMEOUT
+                    - SERVICE_UNAVAILABLE
+                    - GATEWAY_TIMEOUT
             - id: python-sidecar
               uri: lb://PYTHON-SIDECAR
               predicates:
