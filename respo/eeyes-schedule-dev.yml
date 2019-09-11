@@ -48,12 +48,12 @@ spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        #url: jdbc:mysql://127.0.0.1:3306/app_eemseeyes?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-        #username: root
-        #password: manager
-        url: jdbc:mysql://172.22.1.249:3306/app_eeyes_schedule?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-        username: h_eems_web
-        password: Yweb201303
+        url: jdbc:mysql://127.0.0.1:3306/app_eemseeyes?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: manager
+        #url: jdbc:mysql://172.22.1.249:3306/app_eeyes_schedule?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+        #username: h_eems_web
+        #password: Yweb201303
         druid:
             initial-size: 10
             max-active: 100
