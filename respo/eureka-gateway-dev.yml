@@ -1,3 +1,10 @@
+eureka:
+    instance:
+        preferIpAddress: true
+        metadataMap:
+            group: eureka-gateway-group
+            version: 1.0
+
 spring:
     cloud:
         inetutils:
