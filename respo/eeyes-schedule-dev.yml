@@ -42,7 +42,7 @@ eureka:
     instance:
         preferIpAddress: true
         metadataMap:
-            group: eureka-gateway-group
+            group: eeyes-schedule-group
             version: 1.0
 
 spring:
