@@ -41,9 +41,6 @@ mybatis-plus:
 eureka:
     instance:
         preferIpAddress: true
-        metadataMap:
-            group: eeyes-schedule-group
-            version: 1.0
 
 spring:
     application:

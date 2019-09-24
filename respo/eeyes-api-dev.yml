@@ -3,9 +3,6 @@ eureka:
         leaseRenewalIntervalInSeconds: 5
         leaseExpirationDurationInSeconds: 5
         preferIpAddress: true
-        metadataMap:
-            group: eeyes-api-group
-            version: 1.0
 
 spring:
     application:
