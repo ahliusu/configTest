@@ -49,18 +49,6 @@ spring:
     application:
         config:
             path: classpath:rule.xml
-    redis:
-        host: 172.22.2.253
-        port: 6379
-        password: 
-        database: 0
-        timeout: 6000ms
-        jedis:
-            pool:
-                max-active: 1000
-                max-wait: -1ms
-                max-idle: 10
-                min-idle: 5
     mvc:
         throw-exception-if-no-handler-found: true
     resources:
