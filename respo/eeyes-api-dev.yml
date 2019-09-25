@@ -13,21 +13,21 @@ spring:
         driverClassName: com.mysql.jdbc.Driver
         druid:
             first:  #数据源1
-                url: jdbc:mysql://172.18.102.111:3306/app_eemseeyes?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-                username: root
-                password: manager
+                url: "{cipher}AQCgAFASITvmNb3Q8nh/tsjGGweD7QXaz4vmwI6dMn21Hg8wJGtA0K99cpm4WkFIZ7QsbsZq/UlsUOLhMUFTSR2M17eXMHbI/C8P8Pqs3ysvT566r3TQx1kfZCi0mM5ST+IfGg1f4UbNm7SI7WstX/yZph48ArHw5y+03GPFOtUu4PpiuKW8dRggar2InOEcIAAnmgcmA9alwrzRMift7TQYQa4Sfn4LvawMI8rBnsbee/5/U51twlsA/pnOdaAMBkM+tKkWEQQxW+l9l49yjS1jw/sxqOSKXvP56LKwOa/6iheaeccScoZqDgi/U1h9HMB40n0w7LbwrPF7cOz8M2n6RSsteKZX9Cbit/LVYXUTQoU4qqUCGxeDMKwBNAK6zhTWh7kT4KmR/aPBO6yd+TI4jUkqbF9VoLyhdwNNlIq1oq71FC/VraythuSnMzw9grc3DFL/K3u3qygD+0ffYKfeUuO7MFSENZwt8SFt0UOyPYyBN9WC61HzrLYf8UUCVC0="
+                username: "{cipher}AQB66A8v5pemJQoQ8AaRx/WNOp0CJ1vxYcQ9jpXR3Zm8ifmlUSCurWIPkg1bSoEdlA4Pl9c3/8asNAPu/lY9K5Mm5QPgInFe2MQxg44q8bhRe+NFvLC9C3NWsSrHGHMSU72meQC9NbeEaDWQ+jMH0QFXbh7RiNCwWCpp9GgAvTz2UjJJC30MSGfLR6Wp0r3yE6qwq1JmqnclCO6C/cOfiWRXi7VdZJjMhLkfmQ9g1qdqpiDadqcaiL112xOkS61OZ781sCqejrsyzFY4LcQMLiVGH7+2j2ZwRsVxaVud4rIpNdo3LB4SSEDXjU3KB8nEu8GxnXc+woM0b3fPEdwel3UbzRAznKUcTxZeffLrM9N7Epvse0Mqrmh95Ij1CMEXcx8="
+                password: "{cipher}AQCTLEuQYRIjg1fJdvH3uou9pIs4fb56jLVUR5jTdnDWNUBCWfm3Nhn20VWJEkBC0Yx29yiPsay7IWf+l254ihrWJaw3r5BSn/NgUAgBJhS7A3d4IhQ2xUEG1qimCzIaUYr/s88oVqcWPKKS9bJde3NwWU2Fl5/yvQ+h/i5DW9fdGRRHCWQ5Zic3+TsVYdejrYANwfKYZ9Ir8ZIsoy6VFZ/ciADivnsxG3r3M/HC8oMLBud687hDIsserUfz+sunwEGc8s06LBmPxNi4PkMr1iz2tbacNMlEYOJXlUdc7JiHgLLlzjVoDNc8Vbw6K4WFRe0YMCbku7rkSZN3mCVuhvLdsGe6kHn8p9J5OYXLlsCPg781J3ZZID4AryeedEL/biI="
             second:  #数据源2
-                url: jdbc:mysql://172.18.102.111:3306/app_eemsii?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-                username: root
-                password: manager
+                url: "{cipher}AQBLKIj9JfOOgER2z6Cz0T0ZBq/h8dz4ee4VmxqI2zt9wt/BfQ5JVl8t87OpCIPrK1YafmoS0lzd2UQdV3znR5OzkAzvo80CEDur1gwMQwsuRUQyGfuTgPeDUgGpIfia/pd4Qk/cd7rGWeRMRtNwoeS9VYsMj7Lrk4hsnXKCDsnnLESTd8hGgn+NzRvgte6w2QGt1Ej9BV6aAcMqHmXbq3mirEizEk9s+z99iqhQ1PUAqfee2BsHuTlQ377qsKSqFMXZCU1DQpU7OYmdY90pg8IXxgUZ9Lrk1pd2fsYG3uJC0D/XXX76wNW/J7DkBl6UJS1jCEVbQ1Gn0gi//b1VOc69Q+EHUDlBOP4kghes0LPQo0v6aq1FUaBkMPSbi/iBc+xAwLBCRswZs3BC50oP0sH1a1sp61qO74i3Caz1yG6ZswifYuPZDGga6O2n+wACYNX3TnkpCLLGHVzGCQcPPC9M+lm0z5XNJ+M6YipTMiz3/sXXgAq3uG0HAGU4c8ZliYYFwEwV8fw3Q2SjA3RNAvzmTwC1edE62A99GCxK5TWpOA=="
+                username: "{cipher}AQC3jrNFeYtUBUB6ixU5VDDadQjL1ZVKaca2FpXKr/4m7McnGvqHqdz90Z5XyuVfiF1Fh5eudfRk7qDTNU3TsOCk1hveal4yonLz0V3cqYUd+bk8Wr52IXTHFhvhzqlqDbgjHvCL+nhg63e+qvHO0p66yUPmwbhT0oPF5IROZKV1H5Bsh2kedTGMhkL1jCRZrQdM2ZkQoLY5T6duPvAam3BYCuMpgZQ2bKOy0q6Lo1EHHpYy24Vc4YxErwshW30Hs52Zl24Em6u91Dex4g9dqBCIpUXLIDv+S0hKP/wj+lRzqxTMGCv+Ljq1hsTphz/EAYFan2mBlcG1ckkzQ+SevZEKF5tz4uA4uOMGv0vDBjNkjEBfkutxnBTa5r4BOMFs2NQ="
+                password: "{cipher}AQBixvIsI/Igv45E3wbHOG7WA1DF88IQMxVH4aMQuj1TwLRcVDOZ6qsRC/hmt2K1Cb04vbhRQwtuFJKTI/viyzWjgbIBO/daZSpgpNd6mej5aJcjmEXL/uS7DalTfPNhv/1hJ9cZkXI5HD6+rfR37kcUVTytkz4aBbTmcMLX/wknauBJ0lLHUWeyOX98nVa4iLQTQBnFTvha1rG5C6nPE7mwiBY4ezTB1mQrEuRmEiD2IsdyfJhSoTxpUrf/GCZGnWjsrRDBp5809AhiXIxn6fUH3W7/0yYwGtBeaMm3l+TBqpdSiIMLdXREnByPPeK0mtIbOjJTsTRTMp8maGHVGcrFQzPkBsFu6vi2jRJmyZ9EQxsyet4vYnkNNsCo109OfFo="
             three:  #数据源3
-                url: jdbc:mysql://172.18.102.111:3306/meter_info?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-                username: root
-                password: manager
+                url: "{cipher}AQAAS+/Hv/OuZeB6nN2f5Z8vD3SOT9Yyaez3xXcISD0dabD3JMqiHRVzIvGDKZ8gqGMuguj4WxZtMsJtSgnv3UjB3KryQ6bMnNmn6224L9ax1pZof70IxXTu+edHKP+bo6NDJryjFloPqD5ViqlLVPbP/HZFcqKGaoE6Y5xRcE96yN/awXkMioVqsg8D/VOYScI3xzttU2RIQMeaWXKUfVXpWIx+1fW91Bru0t1la25WxCJWgilN3ETpHO37IvzYbjLTu/DdzFz7wIYL4K3o/pZZyt7pT9laNTmdPShJq3qHZwwkkpnraS+HgJ8nmKV03GdT6bOSz2RoNZ4wHZfAF2k3eKsTqY95SWTI+JsSlJ+OAQjBV+EnSUmdvSac8oJN1fyu7lL1+3Mm76ojaSmOON6T3dlZ6n4GqquAqyAtP8pwQMEiHlpb/K/KKelO9wia4ic6REhObYgwgAAphEz8/cRsoIyGNpOGck5NpLHuSJlOk//KS48b6NKST3OY5zjCY8A="
+                username: "{cipher}AQCHOly4wLe/+7fzpNdnwkmLTfjQSolQxMc2mYiCy4Wexq5JwjiiLzzI3anbf77UUr0m0THgeyQ3YNcjjLolSWLjq1lIVUpXeUs/HMlyoZn16Jsa3IAPTbpULGSc9dbpbv2wtZGrkb8DTNWP0y3AuPwlLSIkG5zqNx+xkYTTiDYb6vkU3LVpspLzFthC//XVRcjZCMT9g8tEG1Q7ZAJb2pT5CmEfN1eR0+Cfgl54MvL0bAW/4jT6/2ceN16fORYVyEUdy/QC7pQoDUwpr+ixJiQaiAG+kYVhitO9pN43in20s03HECrfwd5rTB2NRrL7qJP4TayOzJk2G+4GXlJeTOuMynqkVRSewTUBVT+YXclMemiAtCGmI4eectS+BhT1Ac0="
+                password: "{cipher}AQBA2Y5jYfv7ePpiqmKyYM9BzAzShcXduVgJBa20cJofSdv4pegOW2RM8MKZOQbj2QnrIuITfBT0ZvOHiwQPGc1VhlhcSazukmtiTXJ64cyeIkaDbtftwpO/5YY0wgszUFmS3xcJBm+Hah10AafSosADIJ65gRk4oxl0sUtAJjMTBylGTGdcAYyXkLr3ARGXJBbE2VYDHBW+UOsyp+cwC2VuNNR517fFrgbBsr+MEqnf9ODk+vgdtoUUXMDA8CGZP7d9CB7LCfqW0DxsD7Wq3d6XJZywRdZDpAWXi1tjbVs5QRUwBmM5b+tVN4rxlSn4c9wfEXwy6Rcof0DMWsxOqvtPqy/IDxsiZL6sMj5J2+rOiaeoa0mqQkUc3ZDu2dBBaF0="
             four:  #数据源4
-                url: jdbc:mysql://172.18.102.111:3306/app_eemspydl?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-                username: root
-                password: manager
+                url: "{cipher}AQCzWOPh4dHkYWsbjhdarPm06op3C6F1u3HMQPMbGSTCOMcSN2d+z/uQhsmk4kxSLeeA71sD0RyA53a9t3Shv24y7VQY2vfiojocagB5llf6mSY1fanU/tb+MvvE2u2nAusQQ+RNX2MmYbwHdzFIkmhZgKa0B7mKKekzu0kovqe+745fBGBj+UQSCOuMFZJU99PCLdfWLofB3wDxguZC/pfjv+qlGt4GUzPoCLRWpf4uhvkLPEYfrgvzPY/8XFC+rHZPPrWCnuOUg8QqHMuJ2+rAkIEKviT5NmmRyzV/CglSRHfFi5cwnWyHB0kG+lja/htVX3FOSysyKKq33kd52ZFeYbNdqe0P1duwWN7nRXdGJvLOG27oAh3l2BUfKQrsdC81s9lNPNv66kRpy/sSMYMM2IlkbaN5Qxuq4FULUqQpBs65V9lLJNKh3ySkhUcqF9HAKrHrcvsO2YJ1psNZs8bkp1nFmCTVZAevSWqUViYlrcntLLtzKs9Phve6Y65h/6k="
+                username: "{cipher}AQBwRFxzLZ1FLmwdLvCpNY1v/5/fCqhBKLgKFCCx45VgJrMPqIoqOeeo71md/oh37X2RDogpSOiNSm6sfix9Zl3ju6Q4AWPgqUme0dFmFMY8Imy0YqfNB5KHYpDwjRwK5HNGpK/fsTX5iUwCxXlvevRq4a+G15dFcktxh9vsweOSY+mfWOnh/2XYynJ6LDn/btLyHf1oWisFkq2yyDjRFUUYekMzM4JEuHs+DHLoF9Ph72UysR60WF+ud7ioqcxOGZmgzNU1SHXJ/jzFEurlrW/mOPEO1oybTASxbmcfw2b/G+dkxHxgL8otQmtpKOAUn6DSc+cW81jcoHf42KRrQ3CF/02l1iIdan3ZzGPzoenNwQfDrkSQyeIHLjgHHGMetMs="
+                password: "{cipher}AQCRaRHqJV7fniskqwgIRdxJlAV3gGhJJx2yXpnCvdpLp3PmqMvVZSUuuyvJYoj2qUSPAu5PFMaF0gNcyM9GXOJjl0KsmABSa3L8G3gKSZg7QOxIopgEKnfRcdACTrxY5tc7WdFwDMJcKTnejpyQRAii7jR2ngZHeF1zzmTXYBkSlOjpOiB6b0Hfy/nUICMuQm2oQ7CJo/oAE5VDNPeR3BenWR5MtVwaSh2nkL92jYh3pNxlcL3ySra3wGlCT6+sLLnvn12a0zm74su43keBMMUHzzLCxPXd4po+ZFPbk8KFAcxk6fUhOtBga1GfKeIKvhgadYjPka7Isgp99/vbCPxNnidxb89iwGcQybUVuvKrvY1iCl5dWxMgLOcfZYM+rFs="
             initial-size: 10
             max-active: 100
             min-idle: 10
