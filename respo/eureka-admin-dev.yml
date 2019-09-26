@@ -4,18 +4,18 @@ spring:
             preferredNetworks: "10.10.0"
     security:
         user:
-            name: root
+            name: "{cipher}AQA8yMPLb9n34bwl69cuPh5LUmrmXc3qrKnKpv+S5Tseq/E/L8loRQWoJjh8R8fDaTy/PqovmyeHkapIPYsJHXZvliXPVx0qPcjPz6ZS61boNr7mXZF1Y0G+6aqXMJc/v+aPhhsk/DFZ4gEc35QGK5+Gi1KPu46y4GYrtJjY0rbFza9jayqCFsYFD9Kqw6DffKtiRhNXjtInvfJpEDpSJga3mhap0KJ6a7zrKzljUJiSw2VB3ceDruRhPaYz/0ZLFM8FE65b98MYe+B3W6NpHtERyCa+PaiPQPcBDUsjS8bUMTnnGvfpFFwMXm5QWWyXgmtkdjv1kwJjEkN8drQNoSNaJLuHMELr4rvkXOZ90z9LOwfNNr81f0nIYhBz8XPBt/0="
             password: "{cipher}AQC1I24AYa13bPLslUc8kHwpTJ5aEc7eYaMcKPSH5X+MS9AaozoOW2KSx5fPXWuC4bma5twZpV1IUvhDgjJ4DkdDNTmPTjDkf9cq87Ds1FBKSb299thZN/5VvhwrxSVjDSiZal4cIKVFxzQTPoPUOTd+cupl8kh3Ik2pjjzrbJaj87JzAkMLNqiElEsCSB5S/iY/oTgX5RCr8dWFXeKx3pCoaPX4WTKZHzjaDZYKelMONB9s7podHt7Oy0H0v6KwR0+8iNFTwtj5+MNXZK81bNFPSny+T7jCumX35LoXUVWyP9S2nEXrOgyiQ++Uhq3hcdP9aVmPPDWTHjotgMQDN5zGMHymU6EvZvgmU/yQEXNRvDA51GDQfRIk+bjq2PAooco="
     mail:
-        host: smtp.126.com
-        username: lyf_19901204@126.com
-        password: lyf19901204
+        host: "{cipher}AQBBe+wyYNcMvWEiDNIXda726Lu4gq6iLPBjxTM3UNUfU1a/gf49VA1+HaT4EJpBzYZ6SaZ+h2ZEX1YoXBqVLawJ2QvP8a5IFnicgLuZj5J69U8wm3ZprjiSHgaxYir7VR+YVS80FRwdm7Qfq5FAltswG+jiGtDRTv3nb4DhhbKwwZk6Z5IplxxKcBWIKcNFStSNztUZXTJFnfLpSOx0qNzHXCjgJfwCK6Qr51wuPj0SHBsB3X+WyJksgiAkP+RrIKt1bcyY7lNA4xzPNh4BllQsJ76LmRm9ARsVbiAtof9p8dgEosN7OJVeKWp9dHxYUB02aiVAAMKPme4EJnFgK1qlxMjY8otO93XKZGUST+VoXN611MGUB+kLYMymvhL5DP0="
+        username: "{cipher}AQCrrzqQyJ4H2pjo1xgFEA1ph7gRYs1dGKzaI+Vn6WDPVyL7mxbQCse/8dvFf9HK0reXuoNMbernTOgILG8d/FkwTVRN/i2V5FmMMYtNStlyGcbOJoTQa/sPOmqhhppm5z5CdwW6c/AbfU3SsCOzYbCTSwGeL4etTkM5pMd1NC3Wnnc1x+6lkzCoXoOnsVDcbLiNp3YQu/BR2W2Xydv9at9YgIBHNVQFPHt3MHlWNyomQBAEKNInKzLfSZUB2tNbBw8G+Z1xU7+AdO34pAHuvIJmlSnfFseSgic30dLEuQaqeIoQ+e3hwkCf0v4dZ0Av1cp+BC6FUXBk8I6Gg/RO/bv1Az+pRT6PgQV8/hRnVgrAPYI8YIAWu9bcRyJaVLXzTvJKe0OJ6KcxX3tlnln9MMm9"
+        password: "{cipher}AQBVvKxFMckyve6XKrDIrgXDcfY31KhmB0bi7VTLkwtvOtwTov85heAOe35dS5Px4I44Zm9Ymhyr3k4nv9iFutAICa58eGVRC8EmrXypYHI6J4EwJkx7MGAtDVXeBHUZp4fNYPEJ2/wxQ+wXlotlojbojrHcMkfvzzHky0wBHAqqDUoIKxhrVEj+OnLflDbLSzwxpvkB89w/uCsRrih+5Ej36petotbI+sojFOKQcvEWlDp7Ui1aMx8dKLJQbux99jZGvWxvZcxHAblKPa3DNJLnmhpPKVw5NKqFRt2FJk3NR8pSP/hajq6ApaiJ3N1BhOoCRVSEcKTZiKipJFBQfjqqoVw4pvuKui9J2Mh0Bj+A/hKbh/u3nLUV8JbkimatUY4="
     boot:
         admin:
             notify:
                 mail:
-                    to: liu.yanfei@hgnyjs.com
-                    from: lyf_19901204@126.com
+                    to: "{cipher}AQAjwSR084GtZ6I1WftL1NdOuG6+zQsPMiLrOBSDI6Ew0oa+aOAAeNSoZRN3D3JVTl1vtBkEJ8Fm3oGzYA6LH4daLdj24ccH4Qwk294yyUZmUCPpgcyQfr7+j6+SnAzLThSi7Bh12Ma5+hfpS/U4x1tb0bugICIh/t+2NqCQuFnErTHprNLJHMwnNwfqqEZmBDUcvUgX12rfSR41+PVMyEJhDP7BqJKvHpl4s4Gkpz0lz0Io834mmEDt6PMoCBpFbhRMrorn5bzuwzjFrd8HhRlsySzHznQNKlYycFPjH01NrlnrXQByAslgyU+EZTa7Z9WeqAQs5XP0amFsteZQfRxIuinMQyvDzMJC80NkMeseCs1c5ei0cZllzuaSD6IukeUCF17BlRjyMjsmWKgNkpMi"
+                    from: "{cipher}AQAZPYQRoYRnjdrcS6cVpGD+j1mKsB7I1v5SWLELslLw6reLm5fPU2s2wda5O/pJquUfKSYfF2nCfO3TW5WzFtD5KvhbV0JLGI6Ft3Xu860QuZ4byMeWKoDJ6fWQRKmddHvAo+MvKg0/DS4CHpRE37dTPsydYXuTX8ztejyGq5qH0RF/c2YeV9IE8bKnsn5MKoGiqdGVwNpUbMTzPJSD9B3nf7XhMIqpFXYHy1kjL7Pk0zOVPyC9FKF7Av7WrO5ma21rht9Sg3JZIeUOaAzxhui2wEg0NcbV0iME7wlrFCaqoS91fGv9FKp2wywArHj3hAqNJLVv9RAMNb04mpI6FzLRQNzOR8TglNfQojRPjNUW6922qbpqqcTi4P34fRCB+lRSfanIVtnBH8On8MAyKV2A"
             
 
 eureka:
