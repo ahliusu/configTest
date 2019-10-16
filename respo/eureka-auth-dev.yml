@@ -1,8 +1,15 @@
 feign:
+    httpclient:
+        enabled: true
     hystrix:
         enabled: true
 
 hystrix:
+    threadpool:
+        default:
+            coreSize: 200
+            maxQueueSize: 1000
+            queueSizeRejectionThreshold: 800
     command:
         default:
             execution:

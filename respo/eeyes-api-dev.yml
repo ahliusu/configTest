@@ -1,3 +1,28 @@
+feign:
+    httpclient:
+        enabled: true
+    hystrix:
+        enabled: true
+
+hystrix:
+    threadpool:
+        default:
+            coreSize: 200
+            maxQueueSize: 1000
+            queueSizeRejectionThreshold: 800
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: true
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 120000
+
+ribbon:
+    ReadTimeout: 120000
+    ConnectTimeout: 5000
+
 eureka:
     instance:
         leaseRenewalIntervalInSeconds: 5

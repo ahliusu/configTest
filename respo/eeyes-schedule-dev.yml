@@ -1,10 +1,15 @@
-#feign:
-#    httpclient:
-#        enabled: true
-#    hystrix:
-#        enabled: false  
+feign:
+    httpclient:
+        enabled: true
+    hystrix:
+        enabled: true
 
 hystrix:
+    threadpool:
+        default:
+            coreSize: 200
+            maxQueueSize: 1000
+            queueSizeRejectionThreshold: 800
     command:
         default:
             execution:
@@ -17,7 +22,7 @@ hystrix:
 ribbon:
     ReadTimeout: 120000
     ConnectTimeout: 5000
-        
+
 management:
     endpoints:
         web:
