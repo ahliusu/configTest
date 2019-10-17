@@ -51,6 +51,9 @@ eureka:
             version: 1.0
 
 spring:
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
     application:
         config:
             path: classpath:rule.xml

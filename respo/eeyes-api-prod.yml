@@ -24,6 +24,12 @@ ribbon:
     ConnectTimeout: 5000
 
 spring:
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    application:
+        config:
+            path: classpath:rule.xml
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
