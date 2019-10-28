@@ -34,7 +34,7 @@ mybatis-plus:
 #    configuration:
 #        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     mapperLocations: classpath:mapper/**/*.xml
-    typeAliasesPackage: com.hgny.cloud.back.**.entity
+    typeAliasesPackage: com.hgny.modules.**.entity
     mapUnderscoreToCamelCase: true
     db-config:
         idType: 0
