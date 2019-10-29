@@ -18,6 +18,23 @@ spring:
                     enabled: false
                     lowerCaseServiceId: true
             routes:
+            - id: eeyescloud-back
+              uri: lb://EEYESCLOUD-BACK
+              predicates:
+              - Path=/eeyescloud-back/**
+              filters:
+              - StripPrefix=1
+              - name: Retry
+                args:
+                    retries: 5
+                    series:
+                    - SERVER_ERROR
+                    - CLIENT_ERROR
+                    statuses:
+                    - NOT_FOUND
+                    - REQUEST_TIMEOUT
+                    - SERVICE_UNAVAILABLE
+                    - GATEWAY_TIMEOUT
             - id: eeyes-api
               uri: lb://EEYES-API
               predicates:
