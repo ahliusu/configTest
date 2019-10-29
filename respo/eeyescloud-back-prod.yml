@@ -34,7 +34,7 @@ mybatis-plus:
 #    configuration:
 #        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     mapperLocations: classpath:mapper/**/*.xml
-    typeAliasesPackage: com.hgny.modules.**.entity
+    typeAliasesPackage: com.hgny.cloud.back.**.entity
     mapUnderscoreToCamelCase: true
     db-config:
         idType: 0
@@ -59,9 +59,9 @@ spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://172.18.102.111:3306/eeyescloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-        username: root
-        password: manager
+        url: "{cipher}AQB6u37gh67nS66bm98G6eS7+jMSFLVvwuh9l7w99BrHkWcIqU/jn2WIEEHtuxPOaC6QsNlM5g+2QSd5lpI9BuAqJY6YO1lsYlBwIhDDtBlPsGL4PGNpkLkJ36gBf3t78wz/KReiHgfTwOK/JVtUvwwIiI0yhYTg5l1Hp8cO1KiOemEULOpf0d9z+DgcIWn+ycOjTUOFOifIlBCJPsRk9heMxSJbZbIsFEmCM/SHNy4+eaVJ5fQXhmeZKnmcMNdt4sf9CEgC2oFpUOrWWzBel6+YztOdKbgHiBaauMcUTRkpTZkn9NLO1bJ8OOEfeilM642E0SvFpWJwjC7/tkEcXgRw/mUwt6/+QHJuvDzUL6fIbS7TaBsDcM94hT3+QSR2ArVgo0szro0vx4NqePOgpwMO+9wjsts47XISxQXk6jRqyy7Dv1HRa3u70ORqKqv1xch8TWpFRPelkRayUrcQshck5rPsisqwAisWxvKnWUxYoqNLFnchrUNb2oJKvT3SOA9INjJcZ+FXA20Mvd8nzfjRwwKedp1JEFAmIdIpmlW2b9Oqz8iL54Ix8pCrL2GFFyA="
+        username: "{cipher}AQA/+39AA9JsWXcN7x76NZfMbKwqFBW2KovZu9kZ462Hz636/GtxDVf9MdDOVK2WfdGmikBWYk7jvn1t1YHErGdZgVGzRhEzG0fS6a/JNo4mmRmyzjyuXqV/LWv0oqb2bV2WkkzMdLIy9L8RAuAZioomnjzWGq444hNlIhDVhHy0/2tXCEa5zrJGDFbaglX0ZIa0TRMExwT4gaGcASAq7P7OUOXaWuIYklkYvaNZj6ryi2DfWGIB7+KGBsBvne0se/xJt1sLFyWtL9nD/06g13Ohnkw0MKmvUW5dIWY8oxOZsDyKYX8JxYy3vCr1tsqe7tvQYJWl3BplhKStiK1J9kuxL3mcq1vgCyDL//vcCkTOYc1PSc4e6et6EkzfoEh4bGE="
+        password: "{cipher}AQBUP6xrrHj9tGEpUYOK6b4fEePQbx4DD7on9n85DUB61MUnhm75MxfJzLmSVSqrq1ok8Onmi0KJypQCfTAcZP1KpH1+WTKDQrmQAQs7mxQ9EG9nLB93tO9PErG1UDtlUjwSjgRRhhRC95k9NA3AfCIzGg1+Vhubg0LNjW/pXvc4mjOVMwKZSc16pocFshUYKuczNtm9Nps/ztj9Aw7aKfbAYr8KhcltA9yvr/vh2FhHFj+zpjKfd10V8w3Co4sMUTUYzY0qujy1EMQKYobLFk9NbOxD3wsjA6vyJuiRhS5vu490ZlgqpXD7c5W/YoMq0GT84P2+nSEjuLYK0HgSzHENuzBr3DLkcSUVpofx1MRV75Up3QXYe/sm7pK2NfutrJE="
         druid:
             initial-size: 10
             max-active: 100

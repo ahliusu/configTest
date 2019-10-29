@@ -59,9 +59,9 @@ spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        url: jdbc:mysql://172.18.102.111:3306/eeyescloud?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
-        username: root
-        password: manager
+        url: "{cipher}AQC+1pqywla2Gk7r8U3BKkLseUWDcPHld9Og/Fwo9x8DhkAsGhzWWRt/OICRazQke0IK1NKBRNQ257fIpEXQKPMKAZrxbD7uVlzdyNb6U1wDNXR5FG7aOcYNiMdvY3avXgMvq61njuclQ0oJgMCcy4SKeGe0Oldde3Ydu7AFjJNKH7qj0VB6iNOxwI3/kGgPgFUyONrweR64jGVa50Kza0DHZyob/px6buw+Lw9AHSyeo3gCqy7exUh6xKaMEwFIm1LOuyptIxjxMwJ1T23pcEuNC/lUALEL4cuBubwLwWBrKSWDPJ7VmNVMZyuGWevzL07buCdmwSQ60E8W47f6ZjLJMu+ylPjh7Eis5MuEvt8Q3o8PdlUqFM3MS2mqcFpHHt5lr/MK9RyVIbxjB6S5AXBbTfVxs75DIBdqHaBF6IB2HRq5Tcg7MC+35u/ph3gqnFsctcG/m89fr/dQncIs2ytftDCMs/2LVf2jY2nBvcsWCOJz5gCzS+IIT9YqNlPHogk="
+        username: "{cipher}AQCth04c9xQsPoEvFk6qkOJVffka4jRdXGacYq5c/twTFmpegniCOddE6Mj4lV9SLraYJk7jzFLJPyQp6fOLGwCg5jfx/5/RE85Ah4cmG8iQFBZRe3+huyyXRTa5p6ClLxZYvUxup3Z8y5PWRT0HZJbMexwqvvRyGTWCTDCAcKRNmSL29HjENUl7NT+a9FH3NZyz1Dk/iIHkwlK4LMuaSWaSfnXk2poeLZBgOPCVDncKmOf0aU2voH9XMhpmsnIEX+T937W9FyXLy9fc/A5UrvnGZqDfW0taS0dVE8TfeGPch0Kjb9J+M0/VQAW56tE2Xmvk3tBoOMXAgr56JnK6V1eH8566IWVDKyqEBa3oC6EDRqQPcOsEeB0JB1Pb0wkOywM="
+        password: "{cipher}AQBeqjBq5MtOfwEvCzqPq0cZeaZA3Zi0oak/1zLrqIM46BL0hM5p3WvJFSx55fJodnsM1HRd7cSf2xI7xq6x/CnvSP9aNM3PhTzbXhCKEK7FEVSUSbGy07dIUsukwZzP2dnd+Hxjq9ACc20DElDkzCmrF+U91S6K2ef3jBqUoT6gd+66KohryWC6jehbcYvXo75ZI42EkAK7nVcMlNZa+0xNMTRI+TDvybnapJ254v/KnrHkIk2i6PxCaljVb0LMzCJHNLb8W37bpGJlo9ulCDcy5zG70LS0ND6uumPJdIvzprH0tZfQ0onIPW0eraE6ne2mub/21MMKXKx+Ai94zKuwtlm8+urkwXLhtpZbgIaM9aAXnRudnEH9Rb0GY5QtobM="
         druid:
             initial-size: 10
             max-active: 100
