@@ -23,14 +23,12 @@ ribbon:
     ReadTimeout: 120000
     ConnectTimeout: 5000
 
-management:
-    endpoints:
-        web:
-            exposure:
-                include: "*"
-    endpoint:
-        health:
-            show-details: ALWAYS
+eureka:
+    instance:
+        preferIpAddress: true
+        metadataMap:
+            group: eeyescloud-back-group
+            version: 1.0
 
 mybatis-plus:
 #    configuration:
@@ -43,14 +41,10 @@ mybatis-plus:
             idType: 0
             fieldStrategy: NOT_NULL
 
-eureka:
-    instance:
-        preferIpAddress: true
-        metadataMap:
-            group: eeyes-schedule-group
-            version: 1.0
-
 spring:
+    servlet:
+        multipart:
+            max-file-size: 10MB
     jackson:
         time-zone: GMT+8
         date-format: yyyy-MM-dd HH:mm:ss
@@ -64,14 +58,26 @@ spring:
     zipkin:
         base-url: http://localhost:9411
     cloud:
-        inetutils:
+         inetutils:
             preferredNetworks: "10.10.0"
+    redis:
+        database: 0
+        host: 172.22.2.249
+        port: 6379
+        password: 
+        timeout: 6000ms
+        jedis:
+            pool:
+                max-active: 1000
+                max-wait: -1ms
+                max-idle: 100
+                min-idle: 50
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
-        url: "{cipher}AQBCOrqEH/04/A+DhHZY5YZqAEgRoSb4e7dFdN2qrCdVXPKmhkAePX0Q0RCzX5yZX0nxBI3TI+bKCjlEJnlz70Pjt0MDQ3qVCxHqaQ+VA/1fgi5qVmVbkhhdcINmQKKknv/cXAMDHZ7BVn85qqaz/1fyYtTRzy/yVBT4KU2VXzkHrPTmHiEKHf6Nfr0QP79xjTOCN6AoOgy46O+VrkIOufBJR0kMYNolp5sukxts0/RwnYQqCITx9cA+6IuEZr7FVCrEMHnrznQDl9YMzIb+JvWsxXcXfrBdK7P0tgnhHVtHYsi5WhNUvmeALe7Nxp2kUTw3w1v64ashGLIyYpfd61lIxkqj5WXUmMQB4DCBPzR09/VL7LC0X6fNjlxFFeJAPMcrlxE89Cml1KmVNJrvnSsQ+fqauc2pmg/3eahwq+qe2OC+OhP9y1vkXB8cnnvPFeE5OwdwWboqE9h70exmiJFBcXJqe9sJUbjBx6t28W4yyCmnMfEVerGxYD4MG8fQFJ4="
-        username: "{cipher}AQBTcnC7hQdXPHm7Euv9xxeWb9DP/Z8IXKdp/ZgIQqSRxmo+WcT6bKG/bK691l6+fDmhUAA6fWEeInn66R4hEX0EpBcJ93hMztgLLkD4Yz8ddOyooY0Fwt+lbN6URZdwEW87yIQaRzU2BK27smMIQ5/0qPnGF+St7waEtz/BiP5CID5tMYE+OLojw4KktsJhnssIrp68DQO3/vlYvpDaY5tK6Q7U6xsEvvYY50yHIeKw4tbQ9ZlbC5SFpy9ltvm5KLYBc1hinKrAAYUriNx4jT2P65jkACrFhkYSM7Voe6zZyA3eYKtJ5LKfWcbz3653oZvKOBWY2fP9xGcgnnEML7Q9G+f/1BkH7VKkgyy8zLXKrCnDfO5vRXkiT50sk8BjF3w="
-        password: "{cipher}AQA204XCpsyanSvg+vL0QWzN+YsDt1r5eXllbwIj+gCbM8ASu6TV/nrsD3qj4o6gDnbz601pr1sSkz6Wpl7Ijw3g/F9bWMTEEDwnpBM7FSL6S9TyGDEyc8v86b4mdLwf9EHGczr4x1cY2qGtlNippEa6ZBzASUIlbvhSXzZtIPhQBTwgGjk6CfSmtv/xb+K7RiWUs1CRhNmo3GWua9PbNRUJtZ0ZS51offzKoxYKG2H3OyXAkASlhxKeb/+EVGLLqcIIW2ZzaVsbIOjXgadXBrq/ZhlTt9ZLRwFtnyCatLtCskGdc5HUZ2e2RQUcbQ4mhDB7wdw9wilkdkNpZntbRVpsJQ+UfJMiKoLbxwzwitqeXBVRocUkYLC5ZFgrbo9LHl8="
+        url: "{cipher}AQB6u37gh67nS66bm98G6eS7+jMSFLVvwuh9l7w99BrHkWcIqU/jn2WIEEHtuxPOaC6QsNlM5g+2QSd5lpI9BuAqJY6YO1lsYlBwIhDDtBlPsGL4PGNpkLkJ36gBf3t78wz/KReiHgfTwOK/JVtUvwwIiI0yhYTg5l1Hp8cO1KiOemEULOpf0d9z+DgcIWn+ycOjTUOFOifIlBCJPsRk9heMxSJbZbIsFEmCM/SHNy4+eaVJ5fQXhmeZKnmcMNdt4sf9CEgC2oFpUOrWWzBel6+YztOdKbgHiBaauMcUTRkpTZkn9NLO1bJ8OOEfeilM642E0SvFpWJwjC7/tkEcXgRw/mUwt6/+QHJuvDzUL6fIbS7TaBsDcM94hT3+QSR2ArVgo0szro0vx4NqePOgpwMO+9wjsts47XISxQXk6jRqyy7Dv1HRa3u70ORqKqv1xch8TWpFRPelkRayUrcQshck5rPsisqwAisWxvKnWUxYoqNLFnchrUNb2oJKvT3SOA9INjJcZ+FXA20Mvd8nzfjRwwKedp1JEFAmIdIpmlW2b9Oqz8iL54Ix8pCrL2GFFyA="
+        username: "{cipher}AQA/+39AA9JsWXcN7x76NZfMbKwqFBW2KovZu9kZ462Hz636/GtxDVf9MdDOVK2WfdGmikBWYk7jvn1t1YHErGdZgVGzRhEzG0fS6a/JNo4mmRmyzjyuXqV/LWv0oqb2bV2WkkzMdLIy9L8RAuAZioomnjzWGq444hNlIhDVhHy0/2tXCEa5zrJGDFbaglX0ZIa0TRMExwT4gaGcASAq7P7OUOXaWuIYklkYvaNZj6ryi2DfWGIB7+KGBsBvne0se/xJt1sLFyWtL9nD/06g13Ohnkw0MKmvUW5dIWY8oxOZsDyKYX8JxYy3vCr1tsqe7tvQYJWl3BplhKStiK1J9kuxL3mcq1vgCyDL//vcCkTOYc1PSc4e6et6EkzfoEh4bGE="
+        password: "{cipher}AQBUP6xrrHj9tGEpUYOK6b4fEePQbx4DD7on9n85DUB61MUnhm75MxfJzLmSVSqrq1ok8Onmi0KJypQCfTAcZP1KpH1+WTKDQrmQAQs7mxQ9EG9nLB93tO9PErG1UDtlUjwSjgRRhhRC95k9NA3AfCIzGg1+Vhubg0LNjW/pXvc4mjOVMwKZSc16pocFshUYKuczNtm9Nps/ztj9Aw7aKfbAYr8KhcltA9yvr/vh2FhHFj+zpjKfd10V8w3Co4sMUTUYzY0qujy1EMQKYobLFk9NbOxD3wsjA6vyJuiRhS5vu490ZlgqpXD7c5W/YoMq0GT84P2+nSEjuLYK0HgSzHENuzBr3DLkcSUVpofx1MRV75Up3QXYe/sm7pK2NfutrJE="
         druid:
             initial-size: 10
             max-active: 100
@@ -81,15 +87,12 @@ spring:
             max-pool-prepared-statement-per-connection-size: 20
             time-between-eviction-runs-millis: 60000
             min-evictable-idle-time-millis: 300000
-            #validation-query: SELECT 1 FROM DUAL
             test-while-idle: true
             test-on-borrow: false
             test-on-return: false
             stat-view-servlet:
                 enabled: true
                 url-pattern: /druid/*
-                #login-username: admin
-                #login-password: admin
             filter:
                 stat:
                     log-slow-sql: true
@@ -98,4 +101,3 @@ spring:
                 wall:
                     config:
                         multi-statement-allow: true
-            

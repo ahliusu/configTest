@@ -57,6 +57,21 @@ spring:
         add-mappings: false
     zipkin:
         base-url: http://localhost:9411
+    cloud:
+        inetutils:
+            preferredNetworks: "10.10.0"
+    redis:
+        database: 0
+        host: 172.18.102.111
+        port: 6379
+        password: redis
+        timeout: 6000ms
+        jedis:
+            pool:
+                max-active: 1000
+                max-wait: -1ms
+                max-idle: 100
+                min-idle: 50
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver

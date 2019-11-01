@@ -6,6 +6,18 @@ eureka:
             version: 1.0
 
 spring:
+    redis:
+        database: 0
+        host: 172.18.102.111
+        port: 6379
+        password: redis
+        timeout: 6000ms
+        jedis:
+            pool:
+                max-active: 1000
+                max-wait: -1ms
+                max-idle: 100
+                min-idle: 50
     application:
         config:
             path: classpath:rule.xml
@@ -18,6 +30,28 @@ spring:
                     enabled: false
                     lowerCaseServiceId: true
             routes:
+            - id: eeyes-redis
+              uri: lb://EEYES-REDIS
+              predicates:
+              - Path=/eeyes-redis/**
+              filters:
+              - StripPrefix=1
+              - name: Retry
+                args:
+                    retries: 5
+                    series:
+                    - SERVER_ERROR
+                    - CLIENT_ERROR
+                    statuses:
+                    - NOT_FOUND
+                    - REQUEST_TIMEOUT
+                    - SERVICE_UNAVAILABLE
+                    - GATEWAY_TIMEOUT
+              - name: RequestRateLimiter
+                args:
+                    redis-rate-limiter.replenishRate: 100
+                    redis-rate-limiter.burstCapacity: 1
+                    key-resolver: "#{@ipKeyResolver}"
             - id: eeyescloud-back
               uri: lb://EEYESCLOUD-BACK
               predicates:

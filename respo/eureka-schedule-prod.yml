@@ -63,6 +63,9 @@ spring:
         add-mappings: false
     zipkin:
         base-url: http://localhost:9411
+    cloud:
+        inetutils:
+            preferredNetworks: "10.10.0"
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
         driverClassName: com.mysql.jdbc.Driver
