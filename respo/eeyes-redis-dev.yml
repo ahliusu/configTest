@@ -27,7 +27,7 @@ eureka:
     instance:
         preferIpAddress: true
         metadataMap:
-            group: eeyescloud-back-group
+            group: eeyes-redis-group
             version: 1.0
 
 mybatis-plus:
