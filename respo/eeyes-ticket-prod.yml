@@ -39,6 +39,11 @@ mybatis-plus:
       fieldStrategy: NOT_NULL
 
 spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      enabled: true
   jackson:
     time-zone: GMT+8
     date-format: yyyy-MM-dd HH:mm:ss
