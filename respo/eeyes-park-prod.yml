@@ -1,0 +1,88 @@
+feign:
+    httpclient:
+        enabled: true
+    hystrix:
+        enabled: true
+
+hystrix:
+    threadpool:
+        default:
+            coreSize: 200
+            maxQueueSize: 1000
+            queueSizeRejectionThreshold: 800
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: true
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 120000
+
+ribbon:
+    ReadTimeout: 120000
+    ConnectTimeout: 5000
+
+eureka:
+    instance:
+        preferIpAddress: true
+        metadataMap:
+            group: eeyes-park-group
+            version: 1.0
+
+mybatis-plus:
+#    configuration:
+#        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    mapperLocations: classpath:mapper/**/*.xml
+    typeAliasesPackage: com.hgny.**.entity
+    mapUnderscoreToCamelCase: true
+    global-config:
+        db-config:
+            idType: 0
+            fieldStrategy: NOT_NULL
+
+spring:
+    servlet:
+        multipart:
+            max-file-size: 10MB
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    application:
+        config:
+            path: classpath:rule.xml
+    mvc:
+        throw-exception-if-no-handler-found: true
+    resources:
+        add-mappings: false
+    zipkin:
+        base-url: http://localhost:9411
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        url: "{cipher}AQB9YXkJYXL+VB39o+p3MGytrZR6dxrsbV0iIQ+nzczhIF1fDHIc6dYFFxLC9bVMWxyk2VwqBHj8OwbbVZ3jB8+8DgnUs5KY6vAHokLv7lnvn+IBMkDvZ9CtXfKt/o0ky6GbR2s/WDKgruNEdW+O7RvLD7RHxenuRXFSMC0cy3wNWzy1toFGIuGG7ZqiNPXg9V2UwJffcEg6iHk0B/+qS44Hyh1r04xO61Zw/WVoiuPl6gBsP85XTzXmKgVeSuyZq4qai063+FdZh0TF9DReRqlahtdgnOJDBIW/cmkYQaXnQWWwZPsN9H73fyL8gfkCfRep46pYGBEEPP3PK1xCh5X11qbYBoUSNryRXvBSLNECclTyIY8rx9+v/URD6hPA+BzGT7a3DG6DCPLTbgyhpwmJVSCR5PQYCg9zBAvhWPDtOc0AwOQjVUV/pSnOOBAcBCPjkaGVf3qWzB1qY2F+qhHzS57JfrUsA+ZsPyj6OykywVyYhASlJzEAj4kSFPAEnxOp9nd4WYXSbE/3iSTLkYc3"
+        username: "{cipher}AQCT84gGi8cY7ac+j/71DaqJXK6szpx3rbX3MI9/9UP7UCBdJK4nMflQTiShOZGPMY+ruokgEV8UgQG+uW0Nt5Fc3x2cQcRoF7SyrBqpsIqdb75cnR7Kie8LSxcfSZRAhrWAG5nPDGb4UIbeuRYpCVcdzWpo9UcWhKC9Han9+rwMKI7lHRSom69/MVsOU5lzJLiHkwqvS/Wjcoiyrk5oB+7h0+Jq5DIm+q2uTpsGaAK6J0AGkMKbMSvZ5R0GpnfCMZv3G1IHKBAHXruFSuPYD3w/cmHUwdl2+th71Urv3cy5oAN6cjdZbFLvJ0RSLq/WouOZSDaax0Ke+oLHq9ZRSQ+IaIN1w8M2MkkkYYUyx0qaKKcSxUBQzihbGgrbVi6N9n4="
+        password: "{cipher}AQBwpCXTKBQkKNxSD/zq/S5Jaym0zRJTJBcx7J7LUX0uw5XlMTaNpdfjapS70gEba1Z1HOMk/z+B85DlWaG+eTmKNcWw8CyF4uuDhRpJ3gOCsPg/AS1FHd+VTsIfuWC0XbrK7loU9Kh8miACl7E1wsd2pwN7VAP32ZnpDZBIoOD8oJ7OG9erJRrwoLtk/vMbe74XwXVZ+GBvzsFueGbkmQW9F97BJYFsxRcKpNFI3ARwnLcQT7+YAJqkQi6uywIDMF0D8t5/1SoJRjWPFSrHFWN/vlwBfqJkWvU2cOYUxmdCvNv3cP5XqNZttkgJ+GLgxjNfUxw9O9QwheIUswk5OA4yU9q5tK9WIzkDlvN31/Hxk7RMWT0uwmLTCQK8PgpY2zA="
+        druid:
+            initial-size: 10
+            max-active: 100
+            min-idle: 10
+            max-wait: 60000
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            time-between-eviction-runs-millis: 60000
+            min-evictable-idle-time-millis: 300000
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            stat-view-servlet:
+                enabled: true
+                url-pattern: /druid/*
+            filter:
+                stat:
+                    log-slow-sql: true
+                    slow-sql-millis: 1000
+                    merge-sql: false
+                wall:
+                    config:
+                        multi-statement-allow: true
