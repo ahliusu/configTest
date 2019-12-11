@@ -1,0 +1,8 @@
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  data:
+    mongodb:
+      #uri: mongodb://172.18.102.113:27017/hgny
+      uri: mongodb://mongo:Hgny0430@172.22.1.7:27017/hgny?replicaSet=foobar&authSource=admin
