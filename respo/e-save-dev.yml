@@ -44,7 +44,7 @@ spring:
         config:
             path: classpath:rule.xml
     datasource:
-        url: jdbc:mysql://172.22.1.5:3306/app_eemseeyes?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+        url: jdbc:mysql://172.22.1.5:3306/app_esave?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
         username: h_eems_test
         password: Ytest-4587145
         type: com.alibaba.druid.pool.DruidDataSource
