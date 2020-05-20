@@ -1,0 +1,90 @@
+feign:
+    httpclient:
+        enabled: true
+    hystrix:
+        enabled: true
+
+hystrix:
+    threadpool:
+        default:
+            coreSize: 200
+            maxQueueSize: 1000
+            queueSizeRejectionThreshold: 800
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: true
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 120000
+
+ribbon:
+    ReadTimeout: 120000
+    ConnectTimeout: 5000
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        health:
+            show-details: ALWAYS
+
+spring:
+    mvc:
+        throw-exception-if-no-handler-found: true
+    resources:
+        add-mappings: false
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    application:
+        config:
+            path: classpath:rule.xml
+    datasource:
+        url: jdbc:mysql://172.22.1.5:3306/app_eemseeyes?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+        username: h_eems_test
+        password: Ytest-4587145
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        druid:
+            initial-size: 10
+            max-active: 100
+            min-idle: 10
+            max-wait: 60000
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            time-between-eviction-runs-millis: 60000
+            min-evictable-idle-time-millis: 300000
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            stat-view-servlet:
+                enabled: true
+                url-pattern: /druid/*
+                #login-username: admin
+                #login-password: admin
+            filter:
+                stat:
+                    log-slow-sql: true
+                    slow-sql-millis: 1000
+                    merge-sql: false
+                wall:
+                    config:
+                        multi-statement-allow: true
+    redis:
+        host: 127.0.0.1
+        database: 0
+        
+mybatis-plus:
+#    configuration:
+#        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    mapperLocations: classpath:mapper/**/*.xml
+    typeAliasesPackage: com.hgny.**.entity
+    mapUnderscoreToCamelCase: true
+    db-config:
+        idType: 0
+        fieldStrategy: 1
+        
