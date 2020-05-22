@@ -19,6 +19,15 @@ hystrix:
                     thread:
                         timeoutInMilliseconds: 120000
 
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        health:
+            show-details: ALWAYS
+
 ribbon:
     ReadTimeout: 120000
     ConnectTimeout: 5000
