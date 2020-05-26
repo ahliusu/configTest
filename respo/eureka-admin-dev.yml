@@ -12,6 +12,8 @@ spring:
         password: "{cipher}AQBVvKxFMckyve6XKrDIrgXDcfY31KhmB0bi7VTLkwtvOtwTov85heAOe35dS5Px4I44Zm9Ymhyr3k4nv9iFutAICa58eGVRC8EmrXypYHI6J4EwJkx7MGAtDVXeBHUZp4fNYPEJ2/wxQ+wXlotlojbojrHcMkfvzzHky0wBHAqqDUoIKxhrVEj+OnLflDbLSzwxpvkB89w/uCsRrih+5Ej36petotbI+sojFOKQcvEWlDp7Ui1aMx8dKLJQbux99jZGvWxvZcxHAblKPa3DNJLnmhpPKVw5NKqFRt2FJk3NR8pSP/hajq6ApaiJ3N1BhOoCRVSEcKTZiKipJFBQfjqqoVw4pvuKui9J2Mh0Bj+A/hKbh/u3nLUV8JbkimatUY4="
     boot:
         admin:
+            client:
+                readTimeout: 30000
             notify:
                 mail:
                     to: "{cipher}AQAjwSR084GtZ6I1WftL1NdOuG6+zQsPMiLrOBSDI6Ew0oa+aOAAeNSoZRN3D3JVTl1vtBkEJ8Fm3oGzYA6LH4daLdj24ccH4Qwk294yyUZmUCPpgcyQfr7+j6+SnAzLThSi7Bh12Ma5+hfpS/U4x1tb0bugICIh/t+2NqCQuFnErTHprNLJHMwnNwfqqEZmBDUcvUgX12rfSR41+PVMyEJhDP7BqJKvHpl4s4Gkpz0lz0Io834mmEDt6PMoCBpFbhRMrorn5bzuwzjFrd8HhRlsySzHznQNKlYycFPjH01NrlnrXQByAslgyU+EZTa7Z9WeqAQs5XP0amFsteZQfRxIuinMQyvDzMJC80NkMeseCs1c5ei0cZllzuaSD6IukeUCF17BlRjyMjsmWKgNkpMi"
