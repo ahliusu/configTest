@@ -1,0 +1,78 @@
+feign:
+    httpclient:
+        enabled: true
+    hystrix:
+        enabled: true
+
+hystrix:
+    threadpool:
+        default:
+            coreSize: 200
+            maxQueueSize: 1000
+            queueSizeRejectionThreshold: 800
+    command:
+        default:
+            execution:
+                timeout:
+                    enabled: true
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 120000
+
+ribbon:
+    ReadTimeout: 120000
+    ConnectTimeout: 5000
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: "*"
+    endpoint:
+        health:
+            show-details: ALWAYS
+
+spring:
+    boot:
+        admin:
+            client:
+                connect-timeout: 10000
+                read-timeout: 30000
+    jackson:
+        time-zone: GMT+8
+        date-format: yyyy-MM-dd HH:mm:ss
+    application:
+        config:
+            path: classpath:rule.xml
+    datasource:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driverClassName: com.mysql.jdbc.Driver
+        url: "{cipher}AQCP6FjYKYqAhfMJEjiN+huH3yWSk+o+LbG9eD0NQ2sdizp5rnOVCeSklLRC/05OQxd044/W7lUN+OOcquhaTR8KeA9lTjY2YbaMyUqD8VTZEMq9j+09+9psUg7VcxeYdfjh3bsuhTqrRcwJYbc/t2TMN0yOkQmJANN8ForS+u3NoKyLJ4NCwfH1oW7iNb9Zg7M/UuoBd+04Xs5qUgBm0ooPL+egWE5Dg16YlO8PMq0cRXgZ/1MIyNfnP/dk6p6dE4D67J26xcq6gulE6wd55i6N01KZfDmnnTRCrLfDwYXosHZXU4+Fp1jSqw5inWyW1nuQd59AKspVD+sHAPnlkbRDcU+qHU7xj7Y6VAU+yxrdJjFFUNlOjDQVdtu1OOkWeP/trc/pN+cz/5tSyXuT42zngKeX6J8fy5kdhlYWWeY1uRauAPEQNoXUoyH1P0KlKiil7448N51xfMoF0BW9uvO1XJidXtwSLiUYUFUZQnHRRotRCWIiBnsu2nNk3BKbD5028W1z0W9veWU5bzg2q3AuEwuYetmNDGBeNBj5BxAX6Q=="
+        username: "{cipher}AQCAcMISoIvhZVB4Ts2NEAqkBDr+7f+T68l0hOH/EaeD+N03ic80G/t/HzM3BYj3IJXmctfnbtuovKnIDFUse3lrdHteDgLwy7GtOARmw/eGPnbeaDQKCEcplllrJ1Zxg3TmBf9lo1wAaEqhJ43p7G/lvx0aEx2QB9XUdTOsFvf6qYiCE7QOh7EEfWsUn6IwtOW6DrF2Hw6OVysbQdZo/a3jy5WOmKtBpgJro6fBZPTCS/vrcFDw4zPLjNKFclhwEexxKNJSuaUgp23kCiqz96v833/jLKOjYCkdLhi0UCdbbwBu86cRELpr6aEjGGoQSiys4rP9CDlRInVPvP8PzLt7b73UKoeFcfAbQRbIhSaXsgkJ26A8fmvfwydCGohaEBY="
+        password: "{cipher}AQA/NXP6tFWb62HBcgt7szu5cuFEI64P7On6bfCWtK4ILvM+O6AbtbFOEvsxaSyK9amNk/jNx7WQ93pnlJXnNn2eVWFB5CcIZIiOLuDww5fo90QG1DVc/3FM1kpFezjX3qR54HN/qyv46/PE2SZkKU2l9NN1jL33kR6Hfqrf0k1Wbw4obQAa0cGT5khVbz2RO++IPz8phBM5RDQyUb7G/t3QJkZDXxsf46K2ZSYjiTxxxZuVqCSH5JgGUY8iHBSleRL96wGnAfSy+e5gU4U9sy7iuBQGJeLhGP2GATDxVtUi2zCIPrS97eJkbMHlkYv2rLbrfmy7IjdIqCNwa3GVXVYokgr/LZSQAE8wucn/6lomGatrm93H02Ob2Pkjgn/PcHY="
+        druid:
+            initial-size: 10
+            max-active: 100
+            min-idle: 10
+            max-wait: 60000
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            time-between-eviction-runs-millis: 60000
+            min-evictable-idle-time-millis: 300000
+            validation-query: SELECT 1 FROM DUAL
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            stat-view-servlet:
+                enabled: true
+                url-pattern: /druid/*
+                #login-username: admin
+                #login-password: admin
+            filter:
+                stat:
+                    log-slow-sql: true
+                    slow-sql-millis: 1000
+                    merge-sql: true
+                wall:
+                    config:
+                        multi-statement-allow: true
